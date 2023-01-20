@@ -6,8 +6,6 @@
 // delete(key)
 // складність всіх методів має дорівнювати O(1)
 
-
-// Задание сделала со 2 попытки как поняла, используя {} в 13 строке. Если не верно, то можно подробнее)
 class DataStructure {
   constructor() {
     this.data = {}
@@ -22,21 +20,19 @@ class DataStructure {
 
   find(key) {
     if (!this.keys[key]) {
-      return this.cloud;
+      return `key = ${this.cloud}`
     }
     const current = this.data[key]
     if(!current) {
-      return 'this key is not here'
+      return `this key ${key} is not here`
     } 
-    return 'this key is here'
+    return `key = ${key} data = ${current}`
   }
 
-  //  Не совсем понятен данный метод setAll, что именно он должен делать?
-  // Сделала так)) но прекрасно вижу сложность  - O(n)
   setAll(value) {
     this.cloud = value
     this.keys = {}
-    return `All values settled to - ${value}`;
+    return `Set all "${value}"`;
   }
 
   deleteAll() {
@@ -49,9 +45,8 @@ class DataStructure {
       return 'no such key to delete'
     } 
     delete this.data[key]
-    return 'removal was successful'
+    return `removal ${current} was successful`
   }
-
 }
 
 
@@ -60,13 +55,21 @@ dataStructure.insert(0, 'My');
 dataStructure.insert(1, 'name');
 dataStructure.insert(2, 'is');
 dataStructure.insert(3, 'Tatiana');
-console.log(dataStructure.data);
+console.log('data', dataStructure.data);
 
-console.log(dataStructure.find('3'));
-console.log(dataStructure.find('5'));
+console.log('find', dataStructure.find('3'));
 
-console.log(dataStructure.delete(3));
-console.log(dataStructure.data);
-console.log(dataStructure.deleteAll());
+console.log('delete', dataStructure.delete(3));
+console.log('data', dataStructure.data);
+// console.log('deleteAll', dataStructure.deleteAll());
 
-console.log(dataStructure.setAll('My name is Bogdan'));
+console.log(dataStructure.setAll('new info'));
+
+console.log(dataStructure.find('1'));
+dataStructure.insert(3, 'New');
+console.log('data', dataStructure.data);
+console.log('find', dataStructure.find('2'));
+console.log('find', dataStructure.find('3'));
+dataStructure.insert(4, '!');
+console.log('find', dataStructure.find('1'));
+console.log('find', dataStructure.find('4'));

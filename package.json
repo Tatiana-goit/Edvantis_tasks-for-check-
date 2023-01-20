@@ -1,0 +1,28 @@
+{
+  "name": "edvantis_tasks_for_check",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "start:dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tatiana-goit/Edvantis_tasks_for_check.git"
+  },
+  "author": "Tatiana Taranushchenko",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tatiana-goit/Edvantis_tasks_for_check/issues"
+  },
+  "homepage": "https://github.com/Tatiana-goit/Edvantis_tasks_for_check#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  },
+  "dependencies": {
+    "chalk": "^5.2.0",
+    "commander": "^10.0.0"
+  }
+}
